@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property Cross</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">Property Cross</div>
+        <div class="description">Instructional text – “Use the form below to search for houses to buy. You can search by place-name, postcode, or click 'My location', to search in your current location!”</div>
+        <form class="form">
+            <input autocomplete="off" type="text" id="field" class="field">
+            <button class="btn-go" id="go">Go</button>
+            <button type="button" class="btn-location" id="location">Add to LS</button>
+            <button id="clear">Clear</button>
+        </form>
+        <div class="queries">
+            <div class="queries-text">Recent searches:</div>
+            <div class="queries-box">
+                <div class="queries-item">Search result 1</div>
+                <div class="queries-item">Search result 2</div>
+                <div class="queries-item">Search result 3</div>
+            </div>
+        </div>
+        <div class="results">
+            <div class="results-text">Search Results</div>
+            <div class="results-box">
+                <table id="results-table">
+                    <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Bedroom count</th>
+                        <th>Bathroom count</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>some text for the test</td>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>lkajlkjadlkjfaldkjf alkdjfl adlfkjalk</td>
+                        <td>1000px</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script crossorigin src="main.js"></script>
+</body>
+</html>

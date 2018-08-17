@@ -1,0 +1,104 @@
+body {
+  color: #333;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #f1f1f2; }
+
+.wrapper {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.title {
+  font-family: Georgia, sans-serif;
+  text-align: center;
+  font-size: 44px;
+  margin: 40px  0 20px; }
+
+.description {
+  color: #626668;
+  line-height: 20px;
+  text-align: justify; }
+
+.form {
+  margin-top: 60px;
+  display: flex;
+  align-items: stretch; }
+  .form .field {
+    min-height: 40px;
+    min-width: 500px;
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    padding: 0 15px;
+    outline: none;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    box-shadow: 0 3px 8px 2px rgba(0, 0, 0, 0.2); }
+  .form button {
+    padding: 0 15px;
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    margin-right: 20px;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    transition: background-color 300ms ease-in-out; }
+    .form button:hover {
+      background-color: #f3f8fb; }
+
+.queries {
+  margin-top: 50px; }
+  .queries-text {
+    font-size: 1.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333333;
+    padding-left: 15px; }
+  .queries-box {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #979797;
+    background-color: #f3f8fb; }
+    .queries-box .queries-item {
+      padding: 10px;
+      border-bottom: 1px solid #979797; }
+      .queries-box .queries-item:last-child {
+        border-bottom: none; }
+
+.results {
+  margin-top: 50px; }
+  .results-text {
+    font-size: 1.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333333;
+    padding-left: 15px; }
+  .results-box {
+    margin-top: 20px; }
+  .results #results-table {
+    width: 100%;
+    border-collapse: collapse; }
+    .results #results-table tr {
+      border-bottom: 1px solid #999; }
+    .results #results-table tbody tr {
+      border-bottom: 1px solid #999; }
+      .results #results-table tbody tr:last-child {
+        border-bottom: 0; }
+    .results #results-table th {
+      height: 40px;
+      color: darkcyan;
+      text-align: center;
+      vertical-align: middle; }
+    .results #results-table td {
+      height: 40px;
+      color: #788ba0;
+      font-size: 1.125em;
+      text-align: center;
+      vertical-align: middle; }
