@@ -9,8 +9,7 @@ let responseData;
 
 const API_ENDPOINT = 'http://api.nestoria.co.uk/';
 
-
-
+/////////////////////////////////////////////////
 
 let checkStatus = function(response) {
   if (response.status !== 200) {
@@ -23,12 +22,17 @@ let parseJson = function (response) {
   return response.json();
 };
 
-
-
+/////////////////////////////////////////////////
 
 function getInputValue() {
   inputData = input.value;
   input.value = '';
+}
+
+function getCity(event) {
+  event.preventDefault();
+  getInputValue();
+  getRequest(API_ENDPOINT, inputData);
 }
 
 function getRequest(requestUrl, requestData) {
@@ -40,19 +44,23 @@ function getRequest(requestUrl, requestData) {
     .then(function(data) {
       responseData = data;
       console.log('This is JSON data - ', responseData);
+      // addLocalStorage(inputData, responseData.response);
+
+      let responseObj = responseData.response;
+
+      console.log(inputData);
+      let resultOutput = {
+        'location': inputData,
+        'houses': responseData.response.listings
+      };
+      console.log(resultOutput);
+
+      getResults(responseObj.listings);
     })
     .catch(function(err) {
       console.log('This is ERROR - ', err);
     });
-  console.log(responseData);
   return responseData;
-}
-
-function getCity(event) {
-  event.preventDefault();
-  getInputValue();
-  getRequest(API_ENDPOINT, inputData);
-  addLocalStorage('response', responseData);
 }
 
 // input.addEventListener('keyup', getInputValue);
@@ -60,9 +68,18 @@ btnGo.addEventListener('click', getCity);
 
 
 
-//LocalStorage part
 
-// localStorage.setItem('somebody', 'how');
+function getResults(requestObj) {
+  for(let resultKey in requestObj) {
+    let requestOutput = requestObj[resultKey];
+    console.log(requestOutput);
+  }
+}
+
+
+
+
+//LocalStorage section ////////////////////////////////
 
 function addLocalStorage(key, value) {
   let dataStr = JSON.stringify(value);
